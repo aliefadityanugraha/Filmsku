@@ -1,0 +1,205 @@
+/** @format */
+
+:root {
+  --text-color: #fff;
+  --bg-color: #000000;
+}
+body {
+  background: var(--bg-color);
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+/* NAVBAR CSS */
+nav {
+  background: linear-gradient(to top, rgba(20, 20, 20, 0), rgba(0, 0, 0, 0.5));
+  padding: 20px 0px;
+}
+nav a {
+  color: white;
+}
+nav a:hover {
+  color: whitesmoke;
+}
+input {
+  border-radius: 20px;
+  border: 0;
+  color: black;
+  padding: 5px 5px 5px 15px;
+  width: 300px;
+}
+input:focus {
+  outline: none;
+}
+/* INDEX CSS */
+.slide img {
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.carousel-caption {
+  transform: translate(-25%, -60%);
+  z-index: 1;
+  width: 400px;
+}
+.container-absolute {
+  z-index: -1;
+  position: absolute;
+  top: 38vh;
+  left: 0;
+  right: 0;
+  height: 400px;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0), var(--bg-color));
+  filter: drop-shadow(10px);
+}
+.container-second-nav {
+  margin: 30px 60px;
+}
+.container-cards {
+  margin: 0px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+}
+.container .fs-6,
+.container .fs-4 {
+  color: var(--text-color);
+}
+.body-card {
+  background: var(--text-color);
+  border-radius: 0px 0px 5px 5px;
+}
+.text-card {
+  padding: 5px;
+  text-align: center;
+  color: #000;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.205);
+}
+.offcanvas {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+/* DETAILS CSS */
+.parallax {
+  position: fixed;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+.text-para {
+  position: absolute;
+  top: 230px;
+  padding: 0px 0px 40px 20px;
+  color: #fff;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+}
+.body-para {
+  padding: 40px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin-top: 300px;
+  border-radius: 20px 20px 0px 0px;
+}
+.details-img {
+  width: 100%;
+  border-radius: 10px;
+}
+/* PLAY CSS */
+.container-play {
+  margin: 80px 20px 0px 20px;
+  padding: 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.534);
+}
+.nav-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+/* FOOTER CSS */
+footer {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  text-align: left;
+  padding: 80px 40px 40px 40px;
+}
+footer .sosmed {
+  text-align: center;
+}
+/* RESPONSIVE DEVICE 600PX */
+@media screen and (max-width: 600px) {
+  /* INDEX CSS */
+  .container-cards {
+    margin: 0px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  .slide img {
+    width: 100%;
+    height: 40vh;
+  }
+  .container-absolute {
+    display: none;
+  }
+  .container-second-nav {
+    margin: 30px 30px;
+  }
+  .search {
+    display: none;
+  }
+  /* DETAILS CSS */
+  .parallax {
+    height: 240px;
+  }
+  .text-para {
+    top: 190px;
+    font-size: 1.5em;
+  }
+  .body-para {
+    margin-top: 230px;
+  }
+  /* PLAY CSS */
+  .container-play {
+    padding: 0;
+    box-shadow: 0;
+  }
+  .details-img {
+    width: 30%;
+  }
+  /* FOOTER CSS */
+}
+/* RESPONSIVE DEVICE 800PX */
+@media screen and (max-width: 750px) {
+  /* INDEX CSS */
+  .carousel-caption {
+    display: none;
+  }
+  .slide img {
+    width: 100%;
+    height: 40vh;
+  }
+  /* DETAILS CSS */
+  .text-para {
+    font-size: 1.5em;
+  }
+  .details-img {
+    display: block;
+    margin: auto;
+    width: 30%;
+  }
+}
